@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './auths/login/login.component';
 import { AuthguardService } from './services/authguard.service';
+import { DemoMaterialModule } from './modules/material-module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AuthguardService } from './services/authguard.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DemoMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [AuthguardService],
   bootstrap: [AppComponent]
