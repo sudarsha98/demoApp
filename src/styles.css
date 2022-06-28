@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.login_body .mat-form-field-flex input {
+    padding: 0 2%;
+    width: 100%;
+}
+
+.login_body .mat-form-field-flex {
+    background: #f4fafa;
+    border: 1px solid #c3bdbd;
+}
+
+.login_body .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #000;
+    padding: 0 10px;
+}

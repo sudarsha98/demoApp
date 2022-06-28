@@ -1,24 +1,26 @@
-<mat-card>
+<mat-card class="login_body">
     <mat-card-title>
         LOGIN
     </mat-card-title>
     <mat-card-subtitle>Please Enter Your Email and Password</mat-card-subtitle>
     <mat-card-content>
-
-        <div class="example-container">
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-            </mat-form-field>
-        </div>
-
-        <div class="example-container">
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your password</mat-label>
-                <input matInput placeholder="2115454" [formControl]="password" required>
-                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-            </mat-form-field>
-        </div>
+        <form [formGroup]="loginForm" class="fromcls" (ngSubmit)="submit()">
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Email Address" formControlName="email" />
+                    <!-- <mat-error *ngIf="email?.error?[required]"> Email is required</mat-error> -->
+                    <!-- <mat-error *ngIf="email?.error?.[email]"> Please enter a correct email format</mat-error> -->
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Password" formControlName="password" type="password" />
+                    <!-- <mat-error *ngIf="password?.error?.[required]"> Password required</mat-error> -->
+                </mat-form-field>
+            </div>
+            <button mat-raised-button type="submit">
+                Submit
+            </button>
+        </form>
     </mat-card-content>
 </mat-card>
